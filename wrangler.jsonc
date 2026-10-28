@@ -8,17 +8,6 @@
   "observability": {
     "enabled": true
   },
-  // Per-request CPU ceiling (Workers Paid). Caps worst-case compute per request
-  // so a runaway invocation can't rack up CPU-time cost — it's killed instead.
-  // 30s is the Paid default; well above normal page renders (tens of ms).
-  "limits": {
-    "cpu_ms": 30000
-  },
-  // App config is provided at runtime, never committed here:
-  //   - locally via `.dev.vars` (copy `.dev.vars.example`)
-  //   - in production via Worker vars/secrets (e.g. `wrangler secret put ...`)
-  // Required: OWNER_EMAIL, BETTER_AUTH_SECRET. BETTER_AUTH_URL is required in
-  // production; locally it defaults to the request origin when unset.
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
@@ -27,8 +16,8 @@
     {
       "binding": "PM_DB",
       "database_name": "seeder",
-      "database_id": "b9596b56-bb58-41be-bcf1-17e30426ec29",
-      "preview_database_id": "b9596b56-bb58-41be-bcf1-17e30426ec29",
+      "database_id": "73f0b101-0de5-41ea-bbcb-e265da620c9a",
+      "preview_database_id": "73f0b101-0de5-41ea-bbcb-e265da620c9a",
       "migrations_dir": "migrations"
     }
   ],
